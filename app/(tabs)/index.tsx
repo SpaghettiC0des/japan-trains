@@ -1,18 +1,26 @@
-import { ExternalLink } from '@tamagui/lucide-icons'
-import { Anchor, H2, Paragraph, XStack, YStack } from 'tamagui'
-import { ToastControl } from 'app/CurrentToast'
+import { ExternalLink } from "@tamagui/lucide-icons";
+import { Anchor, H2, Paragraph, XStack, YStack } from "tamagui";
+
+import { ToastControl } from "app/CurrentToast";
 
 export default function TabOneScreen() {
   return (
-    <YStack f={1} ai="center" gap="$8" px="$10" pt="$5">
+    <YStack ai="center" f={1} gap="$8" pt="$5" px="$10">
       <H2>Tamagui + Expo</H2>
 
       <ToastControl />
 
-      <XStack ai="center" jc="center" fw="wrap" gap="$1.5" pos="absolute" b="$8">
+      <XStack
+        ai="center"
+        b="$8"
+        fw="wrap"
+        gap="$1.5"
+        jc="center"
+        pos="absolute"
+      >
         <Paragraph fos="$5">Add</Paragraph>
 
-        <Paragraph fos="$5" px="$2" py="$1" col="$blue10" bg="$blue5" br="$3">
+        <Paragraph bg="$blue5" br="$3" col="$blue10" fos="$5" px="$2" py="$1">
           tamagui.config.ts
         </Paragraph>
 
@@ -20,23 +28,23 @@ export default function TabOneScreen() {
 
         <XStack
           ai="center"
+          bg="$purple5"
+          br="$3"
           gap="$1.5"
+          hoverStyle={{ bg: "$purple6" }}
+          pressStyle={{ bg: "$purple4" }}
           px="$2"
           py="$1"
-          br="$3"
-          bg="$purple5"
-          hoverStyle={{ bg: '$purple6' }}
-          pressStyle={{ bg: '$purple4' }}
         >
           <Anchor
-            href="https://tamagui.dev/docs/core/configuration"
-            textDecorationLine="none"
             col="$purple10"
             fos="$5"
+            href="https://tamagui.dev/docs/core/configuration"
+            textDecorationLine="none"
           >
             Configuration guide
           </Anchor>
-          <ExternalLink size="$1" col="$purple10" />
+          <ExternalLink col="$purple10" size="$1" />
         </XStack>
 
         <Paragraph fos="$5" ta="center">
@@ -44,5 +52,5 @@ export default function TabOneScreen() {
         </Paragraph>
       </XStack>
     </YStack>
-  )
+  );
 }

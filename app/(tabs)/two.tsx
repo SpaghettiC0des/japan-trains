@@ -1,11 +1,11 @@
-import { Text, View } from 'tamagui'
+import { Text, View } from "tamagui";
 
 export default function TabTwoScreen() {
   return (
-    <View flex={1} alignItems="center" justifyContent="center">
-      <Text fontSize={20} color="$blue10">
+    <View alignItems="center" flex={1} justifyContent="center">
+      <Text color="$blue10" fontSize={20}>
         Tab Two
       </Text>
     </View>
-  )
+  );
 }
