@@ -4,7 +4,7 @@ export default function TabTwoScreen() {
   return (
     <View alignItems="center" flex={1} justifyContent="center">
       <Text color="$blue10" fontSize={20}>
-        Tab Two
+        React Native role technical exam by Karl Lopez for PM Consulting
       </Text>
     </View>
   );
