@@ -1,9 +1,22 @@
 import { ExternalLink } from "@tamagui/lucide-icons";
+import { useRouter } from "expo-router";
 import { Anchor, H2, Paragraph, XStack, YStack } from "tamagui";
 
 import { ToastControl } from "app/CurrentToast";
+import { PrefectureList } from "features/train-station-list";
 
 export default function TabOneScreen() {
+  const router = useRouter();
+  return (
+    <PrefectureList
+      onItemPress={(item) => {
+        router.navigate({
+          pathname: "/lines",
+          params: { prefectureId: item.id },
+        });
+      }}
+    />
+  );
   return (
     <YStack ai="center" f={1} gap="$8" pt="$5" px="$10">
       <H2>Tamagui + Expo</H2>
