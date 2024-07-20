@@ -52,11 +52,26 @@ function RootLayoutNav() {
   return (
     <Provider>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Stack>
+        <Stack screenOptions={{ headerBackTitleVisible: false }}>
           <Stack.Screen
             name="(tabs)"
             options={{
               headerShown: false,
+            }}
+          />
+
+          <Stack.Screen
+            name="lines"
+            options={{
+              title: "Lines",
+            }}
+          />
+
+          <Stack.Screen
+            name="map"
+            options={{
+              title: "Stations",
+              presentation: "modal",
             }}
           />
 
