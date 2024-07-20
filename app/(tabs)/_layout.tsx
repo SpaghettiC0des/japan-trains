@@ -26,9 +26,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="about"
         options={{
-          title: "Tab Two",
+          title: "About",
           tabBarIcon: ({ color }) => <AudioWaveform color={color} />,
         }}
       />
