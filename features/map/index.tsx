@@ -1,3 +1,4 @@
+import { StyleSheet } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import { View } from "tamagui";
 
@@ -21,7 +22,7 @@ export function TrainMap({ lineId, prefectureId }: Props) {
           longitudeDelta: 0.5,
           latitudeDelta: 0.5,
         }}
-        style={{ width: "100%", height: "100%" }}
+        style={styles.container}
       >
         {line.stations.map((station) => {
           return (
@@ -40,3 +41,10 @@ export function TrainMap({ lineId, prefectureId }: Props) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    height: "100%",
+    width: "100%",
+  },
+});
